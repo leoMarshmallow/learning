@@ -6,13 +6,15 @@ for word in words[:]:
         words.insert(0,word)
         print(words)
 
-# 当你需要遍历一个数字序列的时候可以使用range(start,end,num)来生成一个等差数列
-# 注意的是包括start，不包括end，num不填默认步长为1
+
+
 for num in range(0,4,2):
     print(num)
+# 当你需要遍历一个数字序列的时候可以使用range(start,end,num)来生成一个等差数列
+# 注意的是包括start，不包括end，num不填默认步长为1
 
-# list(iterables)通过一个迭代器来创建一个list
 print(list(range(4)))
+# list(iterables)通过一个迭代器来创建一个list
 
 # 找出10以内的质数
 for num in range(2,11):
