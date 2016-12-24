@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+'类、对象的基础'
+
 class Student(object):
     pass
 
@@ -16,14 +18,19 @@ print(lv.skill)
 
 # 可以在创建实例的时候，把一些我们认为必须绑定的属性强制填写进去。通过定义一个特殊的
 # __init__方法，在创建实例的时候，就把属性绑上去：
+# __str__的作用类似于java中的toString
 class Programmer(object):
 
     def __init__(self,name,skill):
         self.name = name
         self.skill = skill
 
+    def __str__(self):
+        return 'Programmer (name: %s)' % self.name
+
 leo = Programmer("leo", "java")
 print(leo.skill,leo.name)
+print(leo)
 
 # Python允许对实例变量绑定任何数据，也就是说，对于两个实例变量，虽然它们都是同一个类的
 # 不同实例，但拥有的变量名称都可能不同
